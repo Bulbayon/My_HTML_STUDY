@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/jpg" href="ado new genesis.jpg">
+<title> html 5 buttons </title>
+</head>
+
+<!-- Buttons! -->
+
+<!-- You may tweak the style by adding the style attribute! font-size for font size-->
+<body>
+<button style="font-size: 25px; background-color:aquamarine; color:blueviolet; border-radius: 25px;"> Click me </button>
+<!-- In the style attribute, you can tweak the background color, color of the text, the roundness / border radius, or even font size just by adding said attributes-->
+
+<!-- to make a button takes you to something you would need <a> tag-->
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+    <button style="background-color:bisque; font-size:20; color:brown; border-radius:10px;">
+        Click me to take to rick roll!
+    </button>
+</a>
+
+<!-- Button for javascript (a little of js)-->
+
+<p id="happygreet"> Hi!! </p> <!-- assinging id to what you want to change or modify-->
+
+<button onclick="dogoodbye()"> <!-- Telling the computer when you click the button which function initiates-->
+    Happy to meet you
+</button>
+
+<!-- The script for the button -->
+<script>
+    function dogoodbye(){
+        document.getElementById("happygreet").innerHTML = "Happy to meet you too!";
+    }
+</script>
+
+<!-- getelementbyid instruct the computer to get via the assigned id for the modified thing-->
+
+</a>
+</body>
+
+</html>
