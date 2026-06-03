@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something</title>
+</head>
+
+<body>
+    <!-- action -> what location do we want to send the form to -->
+    <!-- form submission is done as a backend, sometimes using something like .php-->
+    <!-- method -> GET is for insensitive data, POST is for confendential info-->
+    <!-- input = textbox, you can specify the type using type attribute -->
+    <!-- label = to remind users what the textbox is for -->
+    <!-- for = screenreaders, or even automatic transfer cursor to input(use id on input)-->
+    <!-- enctype="multipart/form-data" for large data-->
+
+    <!-- Types: email,
+      1. phone, 
+      2. password, 
+      3. text, 
+      4. date, 
+      5. number,
+      6. quantity
+      7. radio
+      8. option <select><option value="">
+      9. checkbox 
+      10. textarea <textarea>
+      11. file submission
+      -->
+     <!-- Pattern in phone = [0-9] from 0 to 9 {4} repeated 4 times before split by - -->
+
+
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+
+        <!-- This is for textbox -->
+        <!-- the attributes do as they say-->
+        <!-- placeholder, minlength, maxlength, required-->
+        <label for="username" > Username: </label>
+        <input type="text" id="username" placeholder="Bob" minlength="3" maxlength="15" required>
+        <br>
+
+        <!-- This is for password-->
+        <!-- placeholder, minlength, maxlength, required-->
+
+        <label for="pass"> Password: </label>
+        <input type="password" id="pass" placeholder="29381294" minlength="6" required>
+        <br>
+
+        <!-- this is for email-->
+         <!--placeholder etc.-->
+
+        <label for="email"> Email: </label>
+        <input type="email" id="email" placeholder="dddd@gmail.com" required>
+        <br>
+
+        <!-- This is for phone number-->
+         <!-- pattern makes it so that only if the number is typpe 
+          like the number can it be submitted-->
+
+        <label for="phone"> phone: </label>
+        <input type="phone" id="phone" placeholder="1234567890" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+        <br>
+
+        <!-- this is for dates-->
+
+        <label for="bday"> Birthday: </label>
+        <input type="date" id="bday"> <br>
+
+        <!-- This is for quantity-->
+         <!-- Max, min-->
+
+        <label for="quantity" > Quantity: </label>
+        <input type="number" id="quantity" min="0" max="5"> <br>
+
+        <!-- These are for radio-->
+         <!-- to make sure you can only pick one out of the three/more, you add name=""-->
+
+            <label for="Mr"> Mr. </label>
+            <input type="radio" id="Mr" name="title">
+
+            <label for="Ms"> Ms. </label>
+            <input type="radio" id="Ms" name="title">
+
+            <label for="doctor"> PhD.  </label>
+            <input type="radio" id="doctor" name="title">
+
+        <!-- these are for options-->
+         <!-- use <select> and then <option value=""> inside the select-->
+
+        <label for="payment"> Payment: </label>
+        <select id="payment">
+            <option value="visa"> Visa </option>
+            <option value="mastercard"> Mastercard </option>
+            <option value="giftcard"> Giftcard </option>
+        </select><br>
+
+        <!-- This is for checkbox-->
+
+        <label for="cb"> Subscribe: </label>
+        <input type="checkbox" id="cb"> <br>
+
+        <!-- this is for textarea-->
+         <!-- The size is measured by rows and columns-->
+
+        <label for="comment">Comment: </label>
+        <textarea id="comment" rows="3" cols="25"></textarea><br>
+
+        <!-- this is for file submission-->
+         <!-- Accept attribute is to make sure the computer handpick the file category and type-->
+
+        <label for="file"> File: </label>
+        <input type="file" id="file" accept="image/png, image/jpg">
+        <br>
+
+
+
+        <input type="reset">
+        <br>
+        <input type="submit">
+        
+    </form>
+    
+</body>
+
+</html>
