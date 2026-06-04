@@ -1,0 +1,70 @@
+<!-- Quick review of html6-forms--->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <form action="index.php" method="POST" encytpe="multipart/form-data">
+        <!--Textbox-->
+        <label for="username">Username: </label>
+        <input type="text" id="username" required minlength="3" maxlength="10"> <br>
+
+
+        <!-- Password -->
+        <label for="password"> Password: </label>
+        <input type="password" id="password" required minlength="4" maxlength="15"><br>
+
+        <label for="email"> Email: </label>
+        <input type="email" id="email" required placeholder="saverine@gmail.com"><br>
+        <!-- phone -->
+        <label for="phone"> Phone: </label>
+        <input type="phone" id="phone" required pattern="[0-9]{4}-[0-9]{4}-[0-9]{3}" placeholder="1234-5678-910"><br>
+        <!-- Number -->
+        <label for="quantity"> Quantity: </label>
+        <input type="number" id="quantity" required min="0" max="99"><br>
+        <!-- Date -->
+        <label for="bday"> Birth date: </label>
+        <input type="date" id="bday" required> <br>
+
+        <!-- Radio -->
+        <h3> Gender </h3>
+        <label for="Male"> Male </label>
+        <input type="radio" id="Male" name="mister">
+
+        <label for="Female"> Female </label>
+        <input type="radio" id="Female" name="mister">
+
+        <label for="Rather-Not-Tell"> Rather Not Tell</label>
+        <input type="radio" id="Rather-Not-Tell" name="mister" ><br>
+        <!-- select, value-->
+        <label for="Subscription-plan"> Subscription Plan: </label>
+        <select id="Subscription-plan">
+            <option value="month"> 1 month </option>
+            <option value="year "> 1 year</option>
+        </select><br>
+        <!-- file-->
+        <label for="file "> Submission: </label>
+        <input id="file" type="file" accept="image/jpg, image/png"><br>
+        <!-- textarea -->
+        <label for="comments"> Feedback: </label>
+        <textarea id="comments" row="20" cols="40"></textarea>
+        <!-- Reset -->
+        <label for="reset"> Reset </label>
+        <input id="reset" type="reset">
+        <!-- submit-->
+        <input type="submit">
+        <!-- CB -->
+        <label for="sub"> Subscribe: </label>
+        <input type="checkbox" id="sub">
+
+
+        
+    </form>
+</body>
+
+</html>
